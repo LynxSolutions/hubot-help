@@ -66,7 +66,7 @@ module.exports = (robot) ->
 
     emit = cmds.join "\n"
 
-    msg.directMessage emit
+    msg.sendDirect emit
 
   robot.router.get "/#{robot.name}/help", (req, res) ->
     cmds = renamedHelpCommands(robot).map (cmd) ->
